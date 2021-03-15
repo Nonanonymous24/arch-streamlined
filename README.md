@@ -59,7 +59,7 @@ git clone https://github.com/Nonanonymous24/arch-streamlined.git
 
 Edit the file `arch_base.sh` using `vim` which is provided with the ISO by default
 ```
-vim arch_bash.sh
+vim arch_base.sh
 ```
 Make necessary changes to the **VARIABLES** section. You would want to change your username and password at the least. Make sure to check if the rest of the defaults agree with your system.
 
