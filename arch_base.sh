@@ -34,6 +34,10 @@ KERNEL="linux"      ### OPTIONS (linux, linux-lts, linux-zen, linux-hardened)
 
 /bin/echo -e "\e[1;32mStarting install...\e[0m"
 
+# Syncing time server
+/bin/echo -e "\e[1;32mGetting time from ntp server...\e[0m"
+timedatectl set-ntp true
+
 # Installing the base system and kernel
 /bin/echo -e "\e[1;32mInstalling base system and $KERNEL kernel...\e[0m"
 
