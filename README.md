@@ -49,7 +49,7 @@ For absolute beginners, try using the [archfi](https://github.com/MatMoul/archfi
 
 To get started right away
 ```
-https://raw.githubusercontent.com/Nonanonymous24/arch-streamlined/main/arch_base.sh
+wget https://raw.githubusercontent.com/Nonanonymous24/arch-streamlined/main/arch_base.sh
 ```
 Optionally, you can clone the repo with
 ```
