@@ -16,7 +16,7 @@ For absolute beginners, try using the [archfi](https://github.com/MatMoul/archfi
 
 ## Contents
 
-1. Arch Linux base install script
+1. Arch Linux base install script 
 2. Desktop Environment install scripts for:
     - KDE Plasma
     - Gnome
@@ -87,6 +87,13 @@ Now finally, run the script
 After the system reboots, login with the newly created user.
 
 Choose any particular desktop install script. 
+
+Each of these scripts would to the following:
+
+1. Sync pacman mirrors
+2. Install the yay AUR helper
+3. Install display server, display server, desktop environment and other useful packages
+
 For example, to install minimal KDE Plasma:
 ```
 wget https://github.com/Nonanonymous24/arch-streamlined/blob/main/kde_minimal.sh
