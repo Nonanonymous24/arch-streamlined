@@ -1,5 +1,5 @@
 # arch-streamlined
-Arch Linux quick install script
+Arch Linux quick install scripts for base and DEs
 
 ### Inspired from
 [Ermanno Ferrari](https://gitlab.com/eflinux/arch-basic)
@@ -13,6 +13,13 @@ The aim is to provide a single script that would install the system in a single 
 
 This script is not exactly designed for beginners and does not provide an interactive environment for the install.
 For absolute beginners, try using the [archfi](https://github.com/MatMoul/archfi) script by [MatMoul](https://github.com/MatMoul) which provides an interactive installer and a bunch of different options to customize your install.
+
+## Contents
+
+1. Arch Linux base install script
+2. Desktop Environment install scripts for:
+    - KDE Plasma
+    - Gnome
 
 ## Getting Started
 
@@ -45,7 +52,7 @@ For absolute beginners, try using the [archfi](https://github.com/MatMoul/archfi
 
 ## Install instructions:
 
-### Step 1:
+#### Step 1:
 
 To get started right away
 ```
@@ -55,7 +62,7 @@ Optionally, you can clone the repo with
 ```
 git clone https://github.com/Nonanonymous24/arch-streamlined.git
 ```
-### Step 2:
+#### Step 2:
 
 Edit the file `arch_base.sh` using `vim` which is provided with the ISO by default
 ```
@@ -63,15 +70,25 @@ vim arch_base.sh
 ```
 Make necessary changes to the **VARIABLES** section. You would want to change your username and password at the least. Make sure to check if the rest of the defaults agree with your system.
 
-### Step 3:
+#### Step 3:
 
 Make the file executable
 ```
 chmod +x arch_base.sh
 ```
-### Step 4:
+#### Step 4:
 
 Now finally, run the script
 ```
 ./arch_base.sh
 ```
+#### Step 5:
+
+After the system reboots, login with the newly created user.
+
+Choose any particular desktop install script. 
+For example, to install minimal KDE Plasma:
+```
+wget https://github.com/Nonanonymous24/arch-streamlined/blob/main/kde_minimal.sh
+```
+Follow the same process as shown above with the base intall script.
