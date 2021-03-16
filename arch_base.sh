@@ -69,7 +69,7 @@ sleep 5
 
 # Installing more packages
 /bin/echo -e "\e[1;32mInstalling more packages...\e[0m"
-pacstrap /mnt nano reflector
+pacstrap /mnt nano vim reflector
 
 sleep 5
 # Generating fstab file
