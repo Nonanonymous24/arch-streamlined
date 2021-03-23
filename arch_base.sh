@@ -19,12 +19,12 @@ FIRMWARE="BIOS/MBR"         ### Takes values "BIOS/MBR" and "UEFI/GPT"
 ### IF USING BIOS/MBR, set name of block device here (For eg. /dev/sda, /dev/vda)
 BLOCK_DEVICE="/dev/sda"     ### Do not set this variable equal to a partition, rather the drive itself.
 
-CPU="intel"         ### OPTIONS (intel, amd) ##Installs intel by default if not set to "amd"
+CPU="intel"         ### OPTIONS (intel, amd, none) ##Installs intel by default if not set to "amd"
 
-GPU="qxl"           ### OPTIONS (qxl, intel, amd, nvidia)
+GPU="qxl"           ### OPTIONS (qxl, intel, amd, nvidia, none)
                     ### do not use capital letters
                     ### If on a VM, use "qxl" 
-                    ### Installs qxl by default if not set to nvidia, intel, or amd
+                    ### Installs none by default if not set to nvidia, intel, qxl, or amd
 
 KERNEL="linux"      ### OPTIONS (linux, linux-lts, linux-zen, linux-hardened) 
                     ### Installs the vanilla kernel if not explicitly specified
@@ -59,8 +59,10 @@ sleep 10
 /bin/echo -e "\e[1;32mInstalling firmware for $CPU processor...\e[0m"
 if [ $CPU == "amd" ]; then
     pacstrap /mnt amd-ucode
-else
+elif [ $CPU == "intel" ]; then
     pacstrap /mnt intel-ucode
+else
+    /bin/echo -e "\e[1;32mNot installing cpu firmware.\e[0m"
 fi
 
 sleep 5 
@@ -125,8 +127,10 @@ elif [ $GPU == "intel" ]; then
     pacman -S --needed --noconfirm xf86-video-intel
 elif [ $GPU == "nvidia" ]; then
     pacman -S --needed --noconfirm nvidia nvidia-utils
-else
+elif [ $GPU == "qxl" ]; then
     pacman -S --needed --noconfirm xf86-video-qxl
+else
+    /bin/echo -e "\e[1;32mNot installing graphic drivers\e[0m"
 fi
 
 ## Install grub bootloader
