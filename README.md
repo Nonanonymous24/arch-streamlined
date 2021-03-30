@@ -96,6 +96,6 @@ Each of these scripts would to the following:
 
 For example, to install minimal KDE Plasma:
 ```
-wget https://github.com/Nonanonymous24/arch-streamlined/blob/main/kde_minimal.sh
+wget https://raw.githubusercontent.com/Nonanonymous24/arch-streamlined/main/kde_minimal.sh
 ```
 Follow the same process as shown above with the base intall script.
