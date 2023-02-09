@@ -153,15 +153,12 @@ sleep 10
 systemctl enable NetworkManager
 systemctl enable bluetooth
 systemctl enable sshd
-systemctl enable libvirtd
 
 # Create user (change username and password)
 /bin/echo -e "\e[1;32mCreating new user with username $USERNAME...\e[0m"
 useradd -m $USERNAME
 /bin/echo -e "\e[1;32mSetting password for $USERNAME to $PASSWORD...\e[0m"
 echo $USERNAME:$PASSWORD | chpasswd
-# for KVM
-usermod -aG libvirt $USERNAME
 # add user to sudoers file
 /bin/echo -e "\e[1;32mAdding user to sudoers file...\e[0m"
 echo "$USERNAME ALL=(ALL) ALL" >> /etc/sudoers.d/$USERNAME
