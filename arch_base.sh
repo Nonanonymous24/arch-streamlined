@@ -116,7 +116,7 @@ echo root:$PASSWORD_ROOT | chpasswd
 
 # Install required packages (the list is extensive so make sure to remove what you don't need)
 /bin/echo -e "\e[1;32mInstalling required packages...\e[0m"
-pacman -S --needed --noconfirm grub efibootmgr networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools base-devel linux-firmware xdg-user-dirs xdg-utils inetutils dnsutils bluez bluez-utils alsa-utils pulseaudio bash-completion openssh rsync virt-manager qemu qemu-arch-extra ovmf bridge-utils dnsmasq vde2 openbsd-netcat ebtables iptables ipset git
+pacman -S --needed --noconfirm grub efibootmgr networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools base-devel linux-firmware xdg-user-dirs xdg-utils inetutils dnsutils bluez bluez-utils alsa-utils pulseaudio bash-completion openssh rsync bridge-utils dnsmasq ipset git
 
 ## Install graphic drivers
 /bin/echo -e "\e[1;32mInstalling graphic drivers for $GPU card...\e[0m"
