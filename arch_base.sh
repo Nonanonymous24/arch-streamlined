@@ -157,7 +157,7 @@ systemctl enable libvirtd
 
 # Create user (change username and password)
 /bin/echo -e "\e[1;32mCreating new user with username $USERNAME...\e[0m"
-useradd -m --badnames $USERNAME
+useradd -m $USERNAME
 /bin/echo -e "\e[1;32mSetting password for $USERNAME to $PASSWORD...\e[0m"
 echo $USERNAME:$PASSWORD | chpasswd
 # for KVM
