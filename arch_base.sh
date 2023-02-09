@@ -97,7 +97,7 @@ hwclock --systohc
 
 # Generate locales and update locale.conf
 /bin/echo -e "\e[1;32mGenerating en_US.UTF-8 locale...\e[0m"
-sed -i '177s/.//' /etc/locale.gen
+sed -i '171s/.//' /etc/locale.gen
 locale-gen
 echo "LANG=en_US.UTF-8" >> /etc/locale.conf
 
