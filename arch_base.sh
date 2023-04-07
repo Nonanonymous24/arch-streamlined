@@ -31,7 +31,7 @@ KERNEL="linux" ### OPTIONS (linux, linux-lts, linux-zen, linux-hardened)
 
 ### SCRIPT START
 
-# Ctrl + c exits entire script
+# Ctr + c exits entire script
 trap "exit" INT
 
 # if error is reached, script exits

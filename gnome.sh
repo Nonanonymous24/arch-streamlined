@@ -1,10 +1,15 @@
 #!/bin/bash
 
 ### SET YOUR VARIABLES HERE
-COUNTRY=China         ### For mirrorlist
-
+COUNTRY=China ### For mirrorlist
 
 ### SCRIPT START
+
+# Ctrl + c exits entire script
+trap "exit" INT
+
+# if error is reached, script exits
+set -e
 
 /bin/echo -e "\e[1;32mInstalling Gnome Desktop Environment...\e[0m"
 # Sync mirrors using reflector

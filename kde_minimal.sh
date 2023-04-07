@@ -1,7 +1,13 @@
 #!/bin/bash
 
 ### SET YOUR VARIABLES HERE
-COUNTRY=China         ### For mirrorlist
+COUNTRY=China ### For mirrorlist
+
+# Ctrl + c exits entire script
+trap "exit" INT
+
+# if error is reached, script exits
+set -e
 
 /bin/echo -e "\e[1;32mInstalling KDE Plasma Minimal Desktop Environment...\e[0m"
 # Sync mirrors using reflector
@@ -33,4 +39,3 @@ sudo systemctl enable sddm
 /bin/echo -e "\e[1;32mSystem will reboot in 5 seconds.\e[0m"
 sleep 5
 sudo reboot
-
